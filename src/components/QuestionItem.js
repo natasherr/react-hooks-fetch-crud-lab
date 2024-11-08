@@ -13,7 +13,7 @@ function QuestionItem({ question, deleteQsn, changeAnswer }) {
     changeAnswer(id, parseInt(event.target.value))
   }
 
-  function handleDeleteWhenClicked(){
+  function handleDeleteClick(){
     deleteQsn(id)
   }
 
@@ -23,9 +23,9 @@ function QuestionItem({ question, deleteQsn, changeAnswer }) {
       <h5>Prompt: {prompt}</h5>
       <label>
         Correct Answer:
-        <select defaultValue={correctIndex} onChange={changeAnswer}>{options}</select>
+        <select defaultValue={correctIndex} onChange={handleChangeAnswer}>{options}</select>
       </label>
-      <button onClick={handleDeleteWhenClicked}>Delete Question</button>
+      <button onClick={handleDeleteClick}>Delete Question</button>
     </li>
   );
 }
